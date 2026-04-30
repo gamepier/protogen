@@ -3,7 +3,7 @@
 	<info>
 		<name>Protogen</name>
 		<update version="1.0.1">
-			<file name="file1.xml" url="https://raw.githubusercontent.com/gamepier/protogen/master/user-yourname/protogen.xml" />
+			<file name="protogen.xml" url="https://raw.githubusercontent.com/gamepier/protogen/master/user-yourname/protogen.xml" />
 		</update>
 	</info>
 
