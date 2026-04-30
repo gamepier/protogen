@@ -7,6 +7,6 @@
 		</update>
 	</info>
 	<files>
-		<file name="protogen.xml" url="https://raw.githubusercontent.com/yourgithubaccount/protogen/master/user-yourname/protogen.xml" />
+		<file name="protogen.xml" url="https://raw.githubusercontent.com/gamepier/protogen/master/user-yourname/protogen.xml" />
 	</files>
 </index>
