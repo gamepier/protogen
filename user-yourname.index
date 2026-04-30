@@ -2,7 +2,7 @@
 <index>
 	<info>
 		<name>Protogen</name>
-		<update version="1.0.1">
+		<update version="1.0.2">
 			<file name="user-yourname.index" url="https://raw.githubusercontent.com/gamepier/protogen/master/user-yourname.index" />
 		</update>
 	</info>
