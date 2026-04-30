@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+	<info>
+		<name>Protogen</name>
+		<update version="1.0.0">
+			<file name="file1.xml" url="https://raw.githubusercontent.com/gamepier/protogen/master/user-yourname/protogen.xml" />
+		</update>
+	</info>
+
+	<!-- place your elements here -->
+	<element name="Protogen" type="Race" source="Custom Homebrew" id="ID_HOME_PROTOGEN">
+			<description>
+				<p>I can put a 5 bajillion page document here or just assume that you probably know the lore. This thing is highly specific to a character that I want to make so i reccomend just forking this and changing stuff up if you want to use this for your own character.</p>
+				<h4> Protogen traits</h4>
+				<p class="indent">
+					<b><i>Ability score increase</i></b>
+					Choose one of: (a) Choose any +2; choose any other +1 (b) Choose any +1; choose any other +1; choose any other +1 (I'm increasing charisma and int so if you wanna change that you gotta fork it)
+				</p>
+				<p class="indent">
+					<b><i>Age</i></b>
+					By the time a Protogen is first conscious, they are effectively physically and mentally mature, and can theoretically live indefinitely so long as they can maintain themselves.
+				</p>
+				<p class="indent">
+					<b><i>Allignment</i></b>
+					Protogen have only (relatively) recently developed an independent society. Due to this, they tend toward no particular alignment. Although it should be noted that for many, their independence is a point of pride - sometimes resulting in a disdain towards authority.
+				</p>
+				<p class="indent">
+					<b><i>Size.</i></b>
+					Your size is medium.
+				</p>
+				<p class="indent">
+					<b><i>Speed</i></b>
+					Your base walking speed is 30 feet, and you have a swim speed of 30 feet, you can also breathe and speak underwater.
+				</p>
+				<p class="indent">
+					<b><i>Protective Breastplate</i></b>
+					Your metallic breastplate isn't just for show - thanks to it, you gain the following benefits:
+					Your AC while not wearing armor is equal to 12 + your Dexterity modifier. As normal, this does not stack with other unarmored AC calculations - if there are multiple ways to calculate your unarmored AC, only one can be applied at any time.
+					As a reaction, you can give yourself resistance to a single instance of fire, cold, necrotic, radiant, acid, poison, thunder, or lightning damage. This ability recharges on a short or long rest.
+				</p>
+				<p class="indent">
+					<b><i>Cybernetic Rest</i></b>
+					Your body does not require sleep in the way fully biological organisms do, but you do need to spend time inactive to retain full mental faculties. Over the course of a long rest, you only need to spend 1 hour in an unconscious sleep-like state. You still require 8 hours to complete a long rest, but have more time to do other light activities such as keeping watch or reading. You also have advantage on saving throws made to resist exhaustion due to lack of rest, and cannot gain more than 3 levels of exhaustion in this way.
+				</p>
+				<p class="indent">
+					<b><i>Digital Visor</i></b>
+					As many everyday benefits as your visor gives you, it is also a weakness. If you take damage equal to ½ or more of your maximum hit points and this damage knocks you unconscious, roll 1d4. On a roll of 1-3, nothing additional happens. If you roll a 4, your visor takes serious damage. If your visor takes damage in this way 3 times without being repaired, you make all Wisdom (Perception) checks that rely on sight with disadvantage. If your visor takes damage this way 5 times without being repaired, you die. Your visor can be repaired in several ways. The spell Lessor Restoration can repair one instance of damage dealt to the visor, and the spell Greater Restoration can repair the visor completely. Alternatively, you can obtain a Nanobot Repair Kit, which can only reliably be obtained at locations where Protogens make up a substantial population. These kits vary in price, but few cost less than 50 gold pieces each.
+				</p>
+				<p class="indent">
+					<b><i>Languages</i></b>
+					You can speak, read, and write one language of choice and Common.
+				</p>
+			</description>
+		<rules>
+			<stat name="charisma" value="2"/>
+			<stat name="intelligence" value="1"/>
+			<stat name="innate speed" value="30" bonus="base"/>
+			<stat name="innate speed:swim" value="30" bonus="base"/>
+			<grant type="Size" id="ID_SIZE_MEDIUM"/>
+			<grant type="Language" id="ID_LANGUAGE_COMMON"/>
+			<grant type="Language" id="ID_LANGUAGE_ABYSSAL"/>
+			<grant type="Racial Trait" id="ID_HOME_PROTOGEN_PROTECTIVE_BREASTPLATE"/>
+		</rules>
+	</element>
+		<element name="Protective Breastplate" type="Racial Trait" source="Custom Homebrew" id="ID_HOME_PROTOGEN_PROTECTIVE_BREASTPLATE">
+			<description><p>Your metallic breastplate isn't just for show - thanks to it, you gain the following benefits:
+					Your AC while not wearing armor is equal to 12 + your Dexterity modifier. As normal, this does not stack with other unarmored AC calculations - if there are multiple ways to calculate your unarmored AC, only one can be applied at any time.
+					As a reaction, you can give yourself resistance to a single instance of fire, cold, necrotic, radiant, acid, poison, thunder, or lightning damage. This ability recharges on a short or long rest.
+			</p></description>
+			<sheet>
+				<description>
+					Your metallic breastplate isn't just for show - thanks to it, you gain the following benefits:
+					Your AC while not wearing armor is equal to {{protogen: protective breastplate}}. As normal, this does not stack with other unarmored AC calculations - if there are multiple ways to calculate your unarmored AC, only one can be applied at any time.
+				</description>
+			</sheet>
+			<rules>
+				<stat name="protogen: protective breastplate" value="12"/>
+				<stat name="protogen: protective breastplate" value="dexterity:modifier"/>
+				<stat name="ac:calculation" value="protogen: protective breastplate" bonus="calculation" alt="Protective Breastplate (Protogen)"/>
+			</rules>
+			<sheet action="Reaction" usage="1/Short Rest">
+				As a reaction, you can give yourself resistance to a single instance of fire, cold, necrotic, radiant, acid, poison, thunder, or lightning damage. This ability recharges on a short or long rest.
+			</sheet>
+		</element>
+</elements>

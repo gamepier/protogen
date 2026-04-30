@@ -1,7 +1,7 @@
-# repositoryname
-additional content to extend [Aurora](https://aurorabuilder.com/), by yourname
+# Protogen homebrew for Aurora Builder
+additional content to extend [Aurora](https://aurorabuilder.com/), by Gamepier
 
-index url: https://raw.githubusercontent.com/yourgithubaccount/repositoryname/master/user-yourname.index
+index url: https://raw.githubusercontent.com/gamepier/protogen/master/user-yourname.index
 
 ---
 
