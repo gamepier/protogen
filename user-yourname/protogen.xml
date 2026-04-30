@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Protogen</name>
-		<update version="1.0.2">
+		<update version="1.0.3">
 			<file name="protogen.xml" url="https://raw.githubusercontent.com/gamepier/protogen/master/user-yourname/protogen.xml" />
 		</update>
 	</info>
@@ -67,10 +67,10 @@
 					Your AC while not wearing armor is equal to 12 + your Dexterity modifier. As normal, this does not stack with other unarmored AC calculations - if there are multiple ways to calculate your unarmored AC, only one can be applied at any time.
 					As a reaction, you can give yourself resistance to a single instance of fire, cold, necrotic, radiant, acid, poison, thunder, or lightning damage. This ability recharges on a short or long rest.
 			</p></description>
-			<sheet>
+			<sheet action="Reaction" usage="1/Short Rest">
 				<description>
-					Your metallic breastplate isn't just for show - thanks to it, you gain the following benefits:
-					Your AC while not wearing armor is equal to {{protogen: protective breastplate}}. As normal, this does not stack with other unarmored AC calculations - if there are multiple ways to calculate your unarmored AC, only one can be applied at any time.
+					Your metallic breastplate isn't just for show - thanks to it, you gain the following benefits:<br/>
+					Your AC while not wearing armor is equal to {{protogen: protective breastplate}}. As normal, this does not stack with other unarmored AC calculations - if there are multiple ways to calculate your unarmored AC, only one can be applied at any time.<br/>As a reaction, you can give yourself resistance to a single instance of fire, cold, necrotic, radiant, acid, poison, thunder, or lightning damage. This ability recharges on a short or long rest.
 				</description>
 			</sheet>
 			<rules>
@@ -79,9 +79,6 @@
 				<stat name="ac:calculation" value="protogen: protective breastplate" bonus="calculation" alt="Protective Breastplate (Protogen)"/>
 			</rules>
 			<sheet action="Reaction" usage="1/Short Rest">
-				<description>
-					as a reaction, you can give yourself resistance to a single instance of fire, cold, necrotic, radiant, acid, poison, thunder, or lightning damage. This ability recharges on a short or long rest.
-				</description>
 			</sheet>
 		</element>
 </elements>
