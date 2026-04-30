@@ -2,7 +2,7 @@
 <elements>
 	<info>
 		<name>Protogen</name>
-		<update version="1.0.1">
+		<update version="1.0.2">
 			<file name="protogen.xml" url="https://raw.githubusercontent.com/gamepier/protogen/master/user-yourname/protogen.xml" />
 		</update>
 	</info>
@@ -79,7 +79,9 @@
 				<stat name="ac:calculation" value="protogen: protective breastplate" bonus="calculation" alt="Protective Breastplate (Protogen)"/>
 			</rules>
 			<sheet action="Reaction" usage="1/Short Rest">
-				As a reaction, you can give yourself resistance to a single instance of fire, cold, necrotic, radiant, acid, poison, thunder, or lightning damage. This ability recharges on a short or long rest.
+				<description>
+					as a reaction, you can give yourself resistance to a single instance of fire, cold, necrotic, radiant, acid, poison, thunder, or lightning damage. This ability recharges on a short or long rest.
+				</description>
 			</sheet>
 		</element>
 </elements>
